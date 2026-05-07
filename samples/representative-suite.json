@@ -1,0 +1,118 @@
+{
+  "product": "color-lut-compare-viewer",
+  "generatedAt": "2026-05-08T00:00:00+09:00",
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "title": "必須項目と証跡がそろった正常系",
+      "items": [
+        {
+          "id": "color-lut-compare-viewer-sample-ok-001",
+          "title": "カラー・LUT比較ビュー 正常サンプル",
+          "owner": "review-owner",
+          "source": "samples/color-lut-compare-viewer/input-a.json",
+          "status": "ready",
+          "decision": "approved",
+          "evidence": [
+            "input-normalized",
+            "review-recorded",
+            "report-exported"
+          ],
+          "notes": "代表操作が最後まで完了する。",
+          "tags": [
+            "WindowsApp",
+            "closed-alpha"
+          ]
+        }
+      ],
+      "expectedSummary": {
+        "pass": 1,
+        "warn": 0,
+        "fail": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "title": "必須項目不足を失敗として返す",
+      "items": [
+        {
+          "id": "color-lut-compare-viewer-sample-missing-001",
+          "title": "",
+          "owner": "",
+          "source": "",
+          "status": "ready",
+          "decision": "approved",
+          "evidence": []
+        }
+      ],
+      "expectedSummary": {
+        "pass": 0,
+        "warn": 0,
+        "fail": 1
+      }
+    },
+    {
+      "id": "warning",
+      "title": "証跡不足または保留状態を警告として返す",
+      "items": [
+        {
+          "id": "color-lut-compare-viewer-sample-warn-001",
+          "title": "カラー・LUT比較ビュー 警告サンプル",
+          "owner": "review-owner",
+          "source": "samples/color-lut-compare-viewer/input-warning.json",
+          "status": "pending",
+          "decision": "pending",
+          "evidence": [],
+          "notes": "人間確認または追加証跡が必要。"
+        }
+      ],
+      "expectedSummary": {
+        "pass": 0,
+        "warn": 1,
+        "fail": 0
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "title": "正常、警告、失敗が混在するバッチ",
+      "items": [
+        {
+          "id": "color-lut-compare-viewer-sample-mix-ok",
+          "title": "承認済み項目",
+          "owner": "review-owner",
+          "source": "samples/color-lut-compare-viewer/mixed-ok.json",
+          "status": "ready",
+          "decision": "approved",
+          "evidence": [
+            "checked"
+          ]
+        },
+        {
+          "id": "color-lut-compare-viewer-sample-mix-warn",
+          "title": "追加確認項目",
+          "owner": "review-owner",
+          "source": "samples/color-lut-compare-viewer/mixed-warn.json",
+          "status": "needs-review",
+          "decision": "pending",
+          "evidence": []
+        },
+        {
+          "id": "color-lut-compare-viewer-sample-mix-fail",
+          "title": "所有者不足項目",
+          "owner": "",
+          "source": "samples/color-lut-compare-viewer/mixed-fail.json",
+          "status": "ready",
+          "decision": "approved",
+          "evidence": [
+            "checked"
+          ]
+        }
+      ],
+      "expectedSummary": {
+        "pass": 1,
+        "warn": 1,
+        "fail": 1
+      }
+    }
+  ]
+}
