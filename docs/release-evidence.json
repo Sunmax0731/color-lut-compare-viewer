@@ -1,22 +1,59 @@
 {
   "product": "color-lut-compare-viewer",
   "tag": "v0.1.0-alpha.1",
-  "status": "pre-release-pending",
+  "status": "released",
+  "updatedAt": "2026-05-07T23:24:33.640Z",
   "manualTestStatus": "手動テスト未実施",
   "automatedVerification": {
-    "npmTest": "pending",
-    "npmRunValidate": "pending",
-    "npmRunBuild": "pending"
+    "npmTest": "passed",
+    "npmRunValidate": "passed",
+    "npmRunBuild": "passed",
+    "firstPassOutput": {
+      "npmTest": "> color-lut-compare-viewer@0.1.0-alpha.1 test\n> node tests/product.test.mjs\n\n{\n  \"product\": \"color-lut-compare-viewer\",\n  \"scenarios\": 4,\n  \"summary\": {\n    \"pass\": 2,\n    \"warn\": 2,\n    \"fail\": 2\n  }\n}",
+      "npmRunValidate": "> color-lut-compare-viewer@0.1.0-alpha.1 validate\n> node src/cli/index.js --input samples/representative-suite.json --output dist/color-lut-compare-viewer-representative-report.json\n\n{\n  \"outputPath\": \"dist/color-lut-compare-viewer-representative-report.json\",\n  \"summary\": {\n    \"pass\": 2,\n    \"warn\": 2,\n    \"fail\": 2\n  },\n  \"scenarios\": 4\n}",
+      "npmRunBuild": "> color-lut-compare-viewer@0.1.0-alpha.1 build\n> node scripts/build-docs-zip.mjs\n\n{\n  \"zipPath\": \"D:\\\\AI\\\\WindowsApp\\\\color-lut-compare-viewer\\\\dist\\\\color-lut-compare-viewer-docs.zip\"\n}"
+    }
   },
   "github": {
     "repo": "https://github.com/Sunmax0731/color-lut-compare-viewer",
-    "releaseUrl": null,
-    "prerelease": null,
-    "latest": null,
-    "assetCount": 0
+    "releaseUrl": "https://github.com/Sunmax0731/color-lut-compare-viewer/releases/tag/v0.1.0-alpha.1",
+    "tagName": "v0.1.0-alpha.1",
+    "prerelease": true,
+    "latest": false,
+    "latestEndpoint": {
+      "latestEndpointStatus": "not-found-or-not-latest",
+      "latestTag": null,
+      "stderr": "gh: Not Found (HTTP 404)\n"
+    },
+    "assetCount": 3,
+    "assets": [
+      "color-lut-compare-viewer-docs.zip",
+      "manual-test.md",
+      "strict-manual-test-addendum.md"
+    ]
   },
   "git": {
-    "mainOriginClean": null,
-    "codexBranchesRemaining": null
+    "mainOriginCleanBeforeEvidenceCommit": {
+      "mainOriginClean": true,
+      "aheadBehind": {
+        "ahead": 0,
+        "behind": 0
+      },
+      "status": "",
+      "codexBranchesRemaining": [
+        "codex/closed-alpha-release"
+      ]
+    }
+  },
+  "assets": [
+    "dist/color-lut-compare-viewer-docs.zip",
+    "docs/manual-test.md",
+    "docs/strict-manual-test-addendum.md"
+  ],
+  "qcds": {
+    "Quality": "S-",
+    "Cost": "S-",
+    "Delivery": "S-",
+    "Satisfaction": "S-"
   }
 }
