@@ -1,0 +1,11 @@
+{
+  "product": "color-lut-compare-viewer",
+  "title": "カラー・LUT比較ビュー",
+  "domain": "WindowsApp",
+  "ideaNo": 17,
+  "platformType": "windows-local-app",
+  "expectedPublicTarget": "GitHub Release / BOOTH",
+  "browser": null,
+  "android": null,
+  "evidence": "dist/platform-runtime-gate-result.json"
+}
